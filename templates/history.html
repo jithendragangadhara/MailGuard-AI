@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analysis History - MailGuard AI</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <div class="brand">🛡 MailGuard <b>AI</b></div>
+    <a href="{{ url_for('home') }}">Dashboard</a>
+</nav>
+
+<main>
+
+<header>
+    <h1>Analysis History</h1>
+    <p>Your previous message analysis results.</p>
+</header>
+
+<section class="panel">
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Message</th>
+            <th>Result</th>
+            <th>Risk</th>
+            <th>Confidence</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}%</td>
+        </tr>
+
+        {% else %}
+        <tr>
+            <td colspan="5">No analysis history available.</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</section>
+
+</main>
+
+</body>
+</html>
