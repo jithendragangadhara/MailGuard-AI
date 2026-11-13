@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-flask
-pandas
-scikit-learn
-google-genai
-python-dotenv
-=======
 flask
 pandas
 scikit-learn
@@ -12,4 +5,3 @@ google-genai
 python-dotenv
 reportlab
 gunicorn
->>>>>>> d4fd2c6194daf6707b06c6dfee417f8dd6e748b6
